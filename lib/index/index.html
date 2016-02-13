@@ -8,93 +8,53 @@
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
-          google.charts.load('current', {'packages':['corechart']});
-          google.charts.setOnLoadCallback(drawSeriesChart);
-          /*
-          * Prosecutor
-          * First  Deputy Prosecutor
-          * Second Deputy Prosecutor
-          *
-          */
-        function drawSeriesChart() {
-          var data = google.visualization.arrayToDataTable([
-            //Bubble ID         X                 Y
-            ['ID',           'Years',        'Salary',      'Position','Buble Size'],
-            ['',              2005,              20000,       'Position',90000],
-            ['',              2007,              25000,       'Position',90000],
-            ['',              2010,              30000,       'Position',90000],
-            ['',              2013,              35000,       'Position',90000],
-            ['',              2015,              40000,       'Position',90000]
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawSeriesChart);
 
-          ]);
+            /*
+            * Prosecutor
+            * First  Deputy Prosecutor
+            * Second Deputy Prosecutor
+            * Head Of The Local Prosecutor\'s Office
+            */
 
-          var options = {
-            title: 'Correlation between job position ' +
-                      'and last years ',
-            hAxis: {title: 'Years'},
-            vAxis: {title: 'Salary (hrn)'},
-            bubble: {textStyle: {fontSize: 12}}
-          };
+            function drawSeriesChart() {
+              var data = google.visualization.arrayToDataTable([
+                //Bubble ID         X               Y
+                ['ID',           'Salary',        'Job Position',     'Position', 'Buble Size'],
+                ['HLPO',           20000,           1,                 '1 - HLPO - 20k hrn', 90000],
+                ['TDP',            25000,           2,                 '2 - TDP  - 25k hrn', 90000],
+                ['SDP',            30000,           3,                 '3 - SDP  - 30k hrn', 90000],
+                ['FDP',            35000,           4,                 '4 - FDP  - 35k hrn', 90000],
+                ['PRSC',           40000,           5,                 '5 - PRSC - 40k hrn', 90000]
+
+              ]);
+
+              var options = {
+                title: 'A typical correlation between a job position ' +
+                      'and its salaries ',
+                      hAxis: {title: 'Salary (hrn)'},
+                      vAxis: {title: 'Job Position'},
+                      bubble: {textStyle: {fontSize: 12}}
+                };
 
           var data2 = google.visualization.arrayToDataTable([
             //Bubble ID         X                 Y
-            ['ID',           'Years',        'Salary',     'Suspicion Status',         'Suspicion percent'],
-            ['',              2000,          0 ,          'Fine',                       0],
-            ['SDP',           2010,          20000 ,      'Fine',                      100000],
-            ['SDP',           2011,          25000 ,      'Fine',                      200000],
-            ['FDP',           2012,          27000 ,      'Fine',                      300000],
-            ['FDP',           2013,          29000 ,      'Fine',                      400000],
-            ['Prsc',          2014,          20000 ,      'Suspected',                 100000],
-            ['Prsc',          2015,          30000 ,      'Suspected',                 500000]
+            ['ID',           'Salary',       'Job Position',     'Suspicion Status',          'Difference in salary'],
+            ['',              0,              0 ,                 'Fine',                      0],
+            ['SDP',           20000,          1 ,                 'Fine',                      +5000],
+            ['SDP',           25000,          2 ,                 'Fine',                      +2000],
+            ['FDP',           27000,          3 ,                 'Fine',                      +2000],
+            ['FDP',           29000,          4 ,                 'Fine',                      +2000],
+            ['Prsc',          20000,          5 ,                 'Suspected',                 -9000],
+            ['Prsc',          30000,          6 ,                 'Suspected',                 -10000]
           ]);
 
           var options2 = {
             title: 'Correlation between job position ' +
-                      'and last years ',
-            hAxis: {title: 'Years'},
-            vAxis: {title: 'Salary'},
-            bubble: {textStyle: {fontSize: 12}}
-          };
-
-          var data3 = google.visualization.arrayToDataTable([
-            //Bubble ID         X                 Y
-            ['ID',           'Years',        'Salary',     'Suspicion Status',         'Suspicion percent'],
-            ['',              2000,          0 ,          'Fine',                       0],
-            ['SDP',           2010,          20000 ,      'Fine',                      100000],
-            ['SDP',           2011,          25000 ,      'Fine',                      200000],
-            ['FDP',           2012,          27000 ,      'Fine',                      300000],
-            ['FDP',           2013,          29000 ,      'Fine',                      400000],
-            ['Prsc',          2014,          20000 ,      'Suspected',                 100000],
-            ['Prsc',          2015,          30000 ,      'Suspected',                 500000]
-          ]);
-
-          var options3 = {
-            title: 'Correlation between job position ' +
-                      'and last years ',
-            hAxis: {title: 'Years'},
-            vAxis: {title: 'Salary'},
-            bubble: {textStyle: {fontSize: 12}}
-          };
-
-          var data4 = google.visualization.arrayToDataTable([
-            //Bubble ID         X                 Y
-            ['ID',           'Years',        'Salary',     'Suspicion Status',         'Suspicion percent'],
-            ['',              2000,          0 ,          'Fine',                       0],
-            ['SDP',           2010,          20000 ,      'Fine',                      100000],
-            ['SDP',           2011,          25000 ,      'Fine',                      200000],
-            ['FDP',           2012,          27000 ,      'Fine',                      300000],
-            ['FDP',           2013,          29000 ,      'Fine',                      400000],
-            ['Prsc',          2014,          20000 ,      'Suspected',                 100000],
-            ['Prsc',          2015,          30000 ,      'Suspected',                 500000]
-          ]);
-
-
-
-          var options4 = {
-            title: 'Correlation between job position ' +
-                      'and last years ',
-            hAxis: {title: 'Years'},
-            vAxis: {title: 'Salary (hrn)'},
+                      'and salaries in practice ',
+            hAxis: {title: 'Salary (hrn)'},
+            vAxis: {title: 'Job Position'},
             bubble: {textStyle: {fontSize: 12}}
           };
 
@@ -104,64 +64,50 @@
           var chart2 = new google.visualization.BubbleChart(document.getElementById('series_chart_div2'));
           chart2.draw(data2, options2);
 
-
-          var chart3 = new google.visualization.BubbleChart(document.getElementById('series_chart_div3'));
-          chart3.draw(data3, options3);
-
-          var chart4 = new google.visualization.BubbleChart(document.getElementById('series_chart_div4'));
-          chart2.draw(data4, options4);
-
           var data5 = google.visualization.arrayToDataTable([
-            ['Regions', 'index corruption' ],
-           ['UA-71', 200 ],
-           ['UA-74', 250 ],
-           ['UA-77', 270 ],
-           ['UA-12', 290 ],
-           ['UA-14', 700 ],
-           ['UA-26', 310 ],
-           ['UA-63', 610 ],
-           ['UA-65', 500 ],
-           ['UA-68', 450 ],
-           ['UA-35', 370 ],
-           ['UA-32', 660 ],
-           ['UA-09', 760 ],
-           ['UA-46', 30 ],
-           ['UA-48', 540 ],
-           ['UA-51', 630 ],
-['UA-53', 410 ],
-['UA-56', 150 ],
-['UA-59', 570 ],
-['UA-61', 470 ],
-['UA-05', 130 ],
-['UA-21', 230 ],
-['UA-23', 530 ],
-['UA-18', 30 ],
-['UA-07', 130 ],
-['UA-43', 730 ],
-['UA-30', 730 ],
-['UA-40', 770 ]
-      
+          ['Regions', 'index corruption' ],
+          ['UA-71', 200 ],
+          ['UA-74', 250 ],
+          ['UA-77', 270 ],
+          ['UA-12', 290 ],
+          ['UA-14', 700 ],
+          ['UA-26', 310 ],
+          ['UA-63', 610 ],
+          ['UA-65', 500 ],
+          ['UA-68', 450 ],
+          ['UA-35', 370 ],
+          ['UA-32', 660 ],
+          ['UA-09', 760 ],
+          ['UA-46', 30 ],
+          ['UA-48', 540 ],
+          ['UA-51', 630 ],
+          ['UA-53', 410 ],
+          ['UA-56', 150 ],
+          ['UA-59', 570 ],
+          ['UA-61', 470 ],
+          ['UA-05', 130 ],
+          ['UA-21', 230 ],
+          ['UA-23', 530 ],
+          ['UA-18', 30 ],
+          ['UA-07', 130 ],
+          ['UA-43', 730 ],
+          ['UA-30', 730 ],
+          ['UA-40', 770 ]
+      ]);
 
-                ]);
+      var options5 = {
+                        region: 'UA',
+                        displayMode: 'regions',
+                        resolution: 'provinces',
+                        legend: {textStyle: {color: 'blue', fontSize: 16}},
+                        domain: 'IN',
+                        colorAxis: {colors: ['#00853f', 'yellow', '#e31b23']},
+                        backgroundColor: '#81d4fa',
+      };
 
-                var options5 = {
-                  region: 'UA',
-                displayMode: 'regions',
-                resolution: 'provinces',
-                legend: {textStyle: {color: 'blue', fontSize: 16}},
-                domain: 'IN',
-              //  region: '002', // Africa
-          colorAxis: {colors: ['#00853f', 'yellow', '#e31b23']},
-          backgroundColor: '#81d4fa',
-        //  datalessRegionColor: '#f8bbd0',
-        //  defaultColor: '#f5f5f5',
-              //  enableRegionInteractivity:yes,
-                //colorAxis: { colors: ['yellow', 'green'] }
-                };
-
-                var chart5 = new google.visualization.GeoChart(document.getElementById('lorem1'));
-                chart5.draw(data5, options5);
-
+      var chart5 = new google.visualization.GeoChart(document.getElementById('lorem1'));
+      chart5.draw(data5, options5);
+}
 
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
@@ -175,15 +121,13 @@
             ]);
 
             var optionsPieChart = {
-              title: 'Official\'s Salariy Percentage Per Selected Region'
+              title: 'Official\'s Salary Percentage Per Selected Region'
             };
 
             var pieChart = new google.visualization.PieChart(document.getElementById('piechart'));
             pieChart.draw(dataPieChart, optionsPieChart);
           }
         </script>
-
-
     </head>
     <body>
         <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
@@ -214,9 +158,18 @@
                                 <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                                     <h4 class="mdl-cell mdl-cell--12-col">Graphs</h4>
 
+                                    <div style="text-align:center;">
+                                        The graphs below will show possibilities of E-Declaration system as an analytical service.
+                                        It shows main charts that describe a situation of salaries among officials.
+                                    </div>
 
-
-
+                                    <div style="text-align:left;">
+                                        <br><br><br>Job Positions:
+                                        <br>- Prosecutor                              -> PRSC
+                                        <br>- First  Deputy Prosecutor                -> FDP
+                                        <br>- Second Deputy Prosecutor                -> SDP
+                                        <br>- Head Of The Local Prosecutor\'s Office  -> HLPO
+                                    </div>
 
                                     <div class="section__text mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                                          <div id="series_chart_div" style="width: 700px; height: 500px;"></div>
