@@ -19,21 +19,21 @@
         function drawSeriesChart() {
           var data = google.visualization.arrayToDataTable([
             //Bubble ID         X                 Y
-            ['ID',           'Years',        'Salary',     'Suspicion Status',         'Suspicion percent'],
-            ['',              2000,          0 ,          'Fine',                       0],
-            ['SDP',           2010,          20000 ,      'Fine',                      100000],
-            ['SDP',           2011,          25000 ,      'Fine',                      200000],
-            ['FDP',           2012,          27000 ,      'Fine',                      300000],
-            ['FDP',           2013,          29000 ,      'Fine',                      400000],
-            ['Prsc',          2014,          20000 ,      'Suspected',                 100000],
-            ['Prsc',          2015,          30000 ,      'Suspected',                 500000]
+            ['ID',           'Years',        'Salary',      'Position','Buble Size'],
+            ['',              2000,              0,          ''         ,0],
+            ['',              2005,              20000,       'Position',90000],
+            ['',              2007,              25000,       'Position',90000],
+            ['',              2010,              30000,       'Position',90000],
+            ['',              2013,              35000,       'Position',90000],
+            ['',              2015,              40000,       'Position',90000],
+            ['',              2020,              75000,       '',0]
           ]);
 
           var options = {
             title: 'Correlation between job position ' +
                       'and last years ',
             hAxis: {title: 'Years'},
-            vAxis: {title: 'Salary'},
+            vAxis: {title: 'Salary (hrn)'},
             bubble: {textStyle: {fontSize: 12}}
           };
 
@@ -53,47 +53,7 @@
             title: 'Correlation between job position ' +
                       'and last years ',
             hAxis: {title: 'Years'},
-            vAxis: {title: 'Salary'},
-            bubble: {textStyle: {fontSize: 12}}
-          };
-
-          var data3 = google.visualization.arrayToDataTable([
-            //Bubble ID         X                 Y
-            ['ID',           'Years',        'Salary',     'Suspicion Status',         'Suspicion percent'],
-            ['',              2000,          0 ,          'Fine',                       0],
-            ['SDP',           2010,          20000 ,      'Fine',                      100000],
-            ['SDP',           2011,          25000 ,      'Fine',                      200000],
-            ['FDP',           2012,          27000 ,      'Fine',                      300000],
-            ['FDP',           2013,          29000 ,      'Fine',                      400000],
-            ['Prsc',          2014,          20000 ,      'Suspected',                 100000],
-            ['Prsc',          2015,          30000 ,      'Suspected',                 500000]
-          ]);
-
-          var options3 = {
-            title: 'Correlation between job position ' +
-                      'and last years ',
-            hAxis: {title: 'Years'},
-            vAxis: {title: 'Salary'},
-            bubble: {textStyle: {fontSize: 12}}
-          };
-
-          var data4 = google.visualization.arrayToDataTable([
-            //Bubble ID         X                 Y
-            ['ID',           'Years',        'Salary',     'Suspicion Status',         'Suspicion percent'],
-            ['',              2000,          0 ,          'Fine',                       0],
-            ['SDP',           2010,          20000 ,      'Fine',                      100000],
-            ['SDP',           2011,          25000 ,      'Fine',                      200000],
-            ['FDP',           2012,          27000 ,      'Fine',                      300000],
-            ['FDP',           2013,          29000 ,      'Fine',                      400000],
-            ['Prsc',          2014,          20000 ,      'Suspected',                 100000],
-            ['Prsc',          2015,          30000 ,      'Suspected',                 500000]
-          ]);
-
-          var options4 = {
-            title: 'Correlation between job position ' +
-                      'and last years ',
-            hAxis: {title: 'Years'},
-            vAxis: {title: 'Salary'},
+            vAxis: {title: 'Salary (hrn)'},
             bubble: {textStyle: {fontSize: 12}}
           };
 
@@ -103,15 +63,34 @@
           var chart2 = new google.visualization.BubbleChart(document.getElementById('series_chart_div2'));
           chart2.draw(data2, options2);
 
-          var chart3 = new google.visualization.BubbleChart(document.getElementById('series_chart_div3'));
-          chart3.draw(data3, options3);
-
-          var chart4 = new google.visualization.BubbleChart(document.getElementById('series_chart_div4'));
-          chart2.draw(data4, options4);
 
 
         }
+
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data_pieChart = google.visualization.arrayToDataTable([
+              ['Task', 'Hours per Day'],
+              ['Work',     11],
+              ['Eat',      2],
+              ['Commute',  2],
+              ['Watch TV', 2],
+              ['Sleep',    7]
+            ]);
+
+            var optionsPieChart = {
+              title: 'My Daily Activities'
+            };
+
+            var pieChart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            pieChart.draw(dataPieChart, optionsPieChart);
+          }
         </script>
+
+
+
     </head>
 
     <body>
@@ -153,11 +132,7 @@
                                     </div>
 
                                     <div class="section__text mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                         <div id="series_chart_div3" style="width: 700px; height: 500px;"></div>
-                                    </div>
-
-                                    <div class="section__text mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                         <div id="series_chart_div4" style="width: 700px; height: 500px;"></div>
+                                         <div id="piechart" style="width: 700px; height: 500px;"></div>
                                     </div>
 
                                 </div>
@@ -174,7 +149,7 @@
                                 <li class="mdl-menu__item">Dolor</li>
                             </ul>
                         </section>
-                      
+
                     </div>
                     <div class="mdl-layout__tab-panel" id="features">
                         <section class="section--center mdl-grid mdl-grid--no-spacing">
