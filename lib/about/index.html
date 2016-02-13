@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title><%= htmlWebpackPlugin.options.title %></title>
+    </head>
+
+    <body>
+<div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <a href="/" class="mdl-layout-title">Material Design Lite</a>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search">
+              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="demo-ribbon"></div>
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="demo-crumbs mdl-color-text--grey-500">
+              <!-- Google &gt; Material Design Lite &gt; How to install MDL -->
+            </div>
+            <h3>ДЕКЛАРАЦІЯ</h3>
+            <p>про майно, доходи, витрати і зобов’язання фінансового характеру</p>
+            <ul>
+              <li>
+                <b>1.</b>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="sample2">
+                  <label class="mdl-textfield__label" for="sample2">Прізвище</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="sample2">
+                  <label class="mdl-textfield__label" for="sample2">Ім'я</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="sample2">
+                  <label class="mdl-textfield__label" for="sample2">По батькові</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="sample2">
+                  <label class="mdl-textfield__label" for="sample2">ІНН</label>
+                </div>
+              </li>
+              <li>
+                <b>2. Місце проживання</b>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear" aria-invalid="false" class="valid">
+        						<option value="unspecified" selected="">Область</option>
+        							<option value="kiev">м. Київ</option>
+        							<option value="1">Івано-Франківська область</option>
+        							<option value="2">Вінницька область</option>
+        							<option value="3">Волинська область</option>
+        							<option value="4">Дніпропетровська область</option>
+        							<option value="5">Донецька область</option>
+        							<option value="6">Житомирська область</option>
+        							<option value="7">Закарпатська область</option>
+        							<option value="8">Запорізька область</option>
+        							<option value="9">Кіровоградська область</option>
+        							<option value="10">Київська область</option>
+        							<option value="11">Кримська Автономна Республіка</option>
+        							<option value="Sevastopol">м. Севастополь</option>
+        							<option value="12">Луганська область</option>
+        							<option value="13">Львівська область</option>
+        							<option value="14">Миколаївська область</option>
+        							<option value="15">Одеська область</option>
+        							<option value="16">Полтавська область</option>
+        							<option value="17">Рівненська область</option>
+        							<option value="18">Сумська область</option>
+        							<option value="19">Тернопільська область</option>
+        							<option value="20">Харківська область</option>
+        							<option value="21">Херсонська область</option>
+        							<option value="22">Хмельницька область</option>
+        							<option value="23">Черкаська область</option>
+        							<option value="24">Чернівецька область</option>
+        							<option value="25">Чернігівська область</option>
+        					</select>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="sample2">
+                    <label class="mdl-textfield__label" for="sample2">Район</label>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="sample2">
+                    <label class="mdl-textfield__label" for="sample2">Населений пункт</label>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <select id="general__place_city_type" name="general[addresses][][place_city_type]" data-inp-act="hidden,unclear" aria-invalid="false" class="valid">
+          						<option value="unspecified" selected="" disabled="">Тип населенного пункту</option>
+          						<option value="city">Місто</option>
+          						<option value="pgt">ПГТ</option>
+          						<option value="village">Село</option>
+          					</select>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="sample2">
+                    <label class="mdl-textfield__label" for="sample2">Решта адреси</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <b>3. Посада</b>
+                </div>
+                <fieldset>
+
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="sample2">
+                    <label class="mdl-textfield__label" for="sample2">Посада</label>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                      <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                      <span class="mdl-checkbox__label">Претендент</span>
+                    </label>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="sample2">
+                    <label class="mdl-textfield__label" for="sample2">Посада</label>
+                  </div>
+              </fieldset>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy and Terms</a></li>
+              <li><a href="#">User Agreement</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+    </body>
+    <!-- {%= o.htmlWebpackPlugin.options.pkg.name + ' v' + o.htmlWebpackPlugin.options.pkg.version + ' built on ' + new Date() %} -->
+
+</html>
