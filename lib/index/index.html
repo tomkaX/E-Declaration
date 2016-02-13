@@ -19,21 +19,20 @@
         function drawSeriesChart() {
           var data = google.visualization.arrayToDataTable([
             //Bubble ID         X                 Y
-            ['ID',           'Years',        'Salary',     'Suspicion Status',         'Suspicion percent'],
-            ['',              2000,          0 ,          'Fine',                       0],
-            ['SDP',           2010,          20000 ,      'Fine',                      100000],
-            ['SDP',           2011,          25000 ,      'Fine',                      200000],
-            ['FDP',           2012,          27000 ,      'Fine',                      300000],
-            ['FDP',           2013,          29000 ,      'Fine',                      400000],
-            ['Prsc',          2014,          20000 ,      'Suspected',                 100000],
-            ['Prsc',          2015,          30000 ,      'Suspected',                 500000]
+            ['ID',           'Years',        'Salary',      'Position','Buble Size'],
+            ['',              2005,              20000,       'Position',90000],
+            ['',              2007,              25000,       'Position',90000],
+            ['',              2010,              30000,       'Position',90000],
+            ['',              2013,              35000,       'Position',90000],
+            ['',              2015,              40000,       'Position',90000]
+
           ]);
 
           var options = {
             title: 'Correlation between job position ' +
                       'and last years ',
             hAxis: {title: 'Years'},
-            vAxis: {title: 'Salary'},
+            vAxis: {title: 'Salary (hrn)'},
             bubble: {textStyle: {fontSize: 12}}
           };
 
@@ -53,6 +52,7 @@
             title: 'Correlation between job position ' +
                       'and last years ',
             hAxis: {title: 'Years'},
+<<<<<<< HEAD
             vAxis: {title: 'Salary'},
             bubble: {textStyle: {fontSize: 12}}
           };
@@ -96,6 +96,9 @@
                       'and last years ',
             hAxis: {title: 'Years'},
             vAxis: {title: 'Salary'},
+=======
+            vAxis: {title: 'Salary (hrn)'},
+>>>>>>> af614c1ce221be833b6fecead1ebd95d108eb5c6
             bubble: {textStyle: {fontSize: 12}}
           };
 
@@ -104,6 +107,7 @@
 
           var chart2 = new google.visualization.BubbleChart(document.getElementById('series_chart_div2'));
           chart2.draw(data2, options2);
+<<<<<<< HEAD
 
           var chart3 = new google.visualization.BubbleChart(document.getElementById('series_chart_div3'));
           chart3.draw(data3, options3);
@@ -192,14 +196,33 @@ UA-59	 Sums'ka Oblast'],
 
 
 
+=======
+>>>>>>> af614c1ce221be833b6fecead1ebd95d108eb5c6
         }
+
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var dataPieChart = google.visualization.arrayToDataTable([
+              ['Official\'s Name', 'Salary Per Year'],
+              ['Official 1',              50000],
+              ['Official 2',              55000],
+              ['Official 3',              48000],
+              ['Official 4',              25000],
+              ['Official 5',              150000]
+            ]);
+
+            var optionsPieChart = {
+              title: 'Official\'s Salariy Percentage Per Selected Region'
+            };
+
+            var pieChart = new google.visualization.PieChart(document.getElementById('piechart'));
+            pieChart.draw(dataPieChart, optionsPieChart);
+          }
         </script>
 
 
     </head>
-
     <body>
-
         <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
@@ -222,11 +245,14 @@ UA-59	 Sums'ka Oblast'],
                 </header>
                 <main class="mdl-layout__content">
                     <div class="mdl-layout__tab-panel is-active" id="overview">
-
                         <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                             <div class="mdl-card mdl-cell mdl-cell--12-col">
                                 <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                                     <h4 class="mdl-cell mdl-cell--12-col">Graphs</h4>
+
+                                    
+
+
 
                                     <div class="section__text mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                                          <div id="series_chart_div" style="width: 700px; height: 500px;"></div>
@@ -237,12 +263,10 @@ UA-59	 Sums'ka Oblast'],
                                     </div>
 
                                     <div class="section__text mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                         <div id="series_chart_div3" style="width: 700px; height: 500px;"></div>
+                                         <div id="piechart" style="width: 700px; height: 500px;"></div>
                                     </div>
 
-                                    <div class="section__text mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                         <div id="series_chart_div4" style="width: 700px; height: 500px;"></div>
-                                    </div>
+
 
                                 </div>
                                 <div class="mdl-card__actions">
