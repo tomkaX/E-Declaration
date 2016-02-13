@@ -20,7 +20,6 @@
           var data = google.visualization.arrayToDataTable([
             //Bubble ID         X                 Y
             ['ID',           'Years',        'Salary',      'Position','Buble Size'],
-
             ['',              2005,              20000,       'Position',90000],
             ['',              2007,              25000,       'Position',90000],
             ['',              2010,              30000,       'Position',90000],
@@ -64,20 +63,19 @@
           chart2.draw(data2, options2);
         }
 
-        google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
             var dataPieChart = google.visualization.arrayToDataTable([
-              ['Task', 'Hours per Day'],
-              ['Work',     11],
-              ['Eat',      2],
-              ['Commute',  2],
-              ['Watch TV', 2],
-              ['Sleep',    7]
+              ['Official\'s Name', 'Salary Per Year'],
+              ['Official 1',              50000],
+              ['Official 2',              55000],
+              ['Official 3',              48000],
+              ['Official 4',              25000],
+              ['Official 5',              150000]
             ]);
 
             var optionsPieChart = {
-              title: 'My Daily Activities'
+              title: 'Official\'s Salariy Percentage Per Selected Region'
             };
 
             var pieChart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -108,11 +106,14 @@
                 </header>
                 <main class="mdl-layout__content">
                     <div class="mdl-layout__tab-panel is-active" id="overview">
-
                         <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                             <div class="mdl-card mdl-cell mdl-cell--12-col">
                                 <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                                     <h4 class="mdl-cell mdl-cell--12-col">Graphs</h4>
+
+                                    
+
+
 
                                     <div class="section__text mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                                          <div id="series_chart_div" style="width: 700px; height: 500px;"></div>
@@ -125,6 +126,8 @@
                                     <div class="section__text mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                                          <div id="piechart" style="width: 700px; height: 500px;"></div>
                                     </div>
+
+
 
                                 </div>
                                 <div class="mdl-card__actions">
