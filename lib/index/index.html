@@ -20,13 +20,13 @@
           var data = google.visualization.arrayToDataTable([
             //Bubble ID         X                 Y
             ['ID',           'Years',        'Salary',      'Position','Buble Size'],
-            ['',              2000,              0,          ''         ,0],
+
             ['',              2005,              20000,       'Position',90000],
             ['',              2007,              25000,       'Position',90000],
             ['',              2010,              30000,       'Position',90000],
             ['',              2013,              35000,       'Position',90000],
-            ['',              2015,              40000,       'Position',90000],
-            ['',              2020,              75000,       '',0]
+            ['',              2015,              40000,       'Position',90000]
+
           ]);
 
           var options = {
@@ -62,15 +62,12 @@
 
           var chart2 = new google.visualization.BubbleChart(document.getElementById('series_chart_div2'));
           chart2.draw(data2, options2);
-
-
-
         }
 
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
-            var data_pieChart = google.visualization.arrayToDataTable([
+            var dataPieChart = google.visualization.arrayToDataTable([
               ['Task', 'Hours per Day'],
               ['Work',     11],
               ['Eat',      2],
@@ -84,17 +81,11 @@
             };
 
             var pieChart = new google.visualization.PieChart(document.getElementById('piechart'));
-
             pieChart.draw(dataPieChart, optionsPieChart);
           }
         </script>
-
-
-
     </head>
-
     <body>
-
         <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
