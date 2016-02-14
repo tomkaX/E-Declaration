@@ -10,30 +10,24 @@
 
             <script type="text/javascript" src="server.js"></script>
         <script type="text/javascript">
-
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawSeriesChart);
-
-
             /*
             * Prosecutor
             * First  Deputy Prosecutor
             * Second Deputy Prosecutor
             * Head Of The Local Prosecutor\'s Office
             */
-
             function drawSeriesChart() {
               var data = google.visualization.arrayToDataTable([
                 //Bubble ID         X               Y
-                ['ID',           'Salary',        'Job Position',     'Position', 'Buble Size'],
-                ['HLPO',           20000,           1,                 '1 - HLPO - ₴ 20k', 90000],
-                ['TDP',            25000,           2,                 '2 - TDP  - ₴ 25k', 90000],
-                ['SDP',            30000,           3,                 '3 - SDP  - ₴ 30k', 90000],
-                ['FDP',            35000,           4,                 '4 - FDP  - ₴ 35k', 90000],
-                ['PRSC',           40000,           5,                 '5 - PRSC - ₴ 40k', 90000]
-
+                ['ID',           'Year',        'Job Position',     'Position', 'Buble Size'],
+                ['HLPO',           new Date(2010,01,01),           1,                 '1 - HLPO - ₴ 20k', 20],
+                ['TDP',            new Date(2011,01,01),            2,                 '2 - TDP  - ₴ 25k', 25],
+                ['SDP',            new Date(2012,01,01),           3,                 '3 - SDP  - ₴ 30k', 30],
+                ['FDP',            new Date(2013,01,01),            4,                 '4 - FDP  - ₴ 35k', 35],
+                ['PRSC',          new Date(2014,01,01),            5,                 '5 - PRSC - ₴ 40k', 40]
               ]);
-
               var options = {
                 title: 'A typical correlation between a job position ' +
                       'and its salaries ',
@@ -41,19 +35,15 @@
                       vAxis: {title: 'Job Position'},
                       bubble: {textStyle: {fontSize: 12}}
                 };
-
           var data2 = google.visualization.arrayToDataTable([
             //Bubble ID         X                 Y
             ['ID',           'Salary',       'Job Position',     'Suspicion Status',          'Difference in salary'],
-
-            ['SDP',           20000,          1 ,                 'Fine',                      +5000],
-            ['SDP',           25000,          2 ,                 'Fine',                      +2000],
-            ['FDP',           27000,          3 ,                 'Fine',                      +2000],
-            ['FDP',           29000,          4 ,                 'Fine',                      +2000],
-
-            ['Prsc',          30000,          6 ,                 'Suspected',                 -10000]
+            ['SDP',           20000,          1 ,                 'Fine',                      1],
+            ['SDP',           25000,          2 ,                 'Fine',                     2],
+            ['FDP',           27000,          3 ,                 'Fine',                      3],
+            ['FDP',           29000,          4 ,                 'Fine',                      5],
+           ['Prsc',          35000,          5 ,                 'Fine',                 5]
           ]);
-
           var options2 = {
             title: 'Correlation between job position ' +
                       'and salaries in practice ',
@@ -61,15 +51,11 @@
             vAxis: {title: 'Job Position'},
             bubble: {textStyle: {fontSize: 12}}
           };
-
           var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
           chart.draw(data, options);
-
           var chart2 = new google.visualization.BubbleChart(document.getElementById('series_chart_div2'));
           chart2.draw(data2, options2);
-
           var data5 = google.visualization.arrayToDataTable([
-
           ['Regions', 'index corruption' ],
           ['UA-71', 200 ],
           ['UA-74', 250 ],
@@ -99,7 +85,6 @@
           ['UA-30', 730 ],
           ['UA-40', 770 ]
       ]);
-
       var options5 = {
                         region: 'UA',
                         displayMode: 'regions',
@@ -109,15 +94,9 @@
                         colorAxis: {colors: ['#00853f', 'yellow', '#e31b23']},
                         backgroundColor: '#81d4fa',
       };
-
       var chart5 = new google.visualization.GeoChart(document.getElementById('lorem1'));
       chart5.draw(data5, options5);
-
-
 }
-
-
-
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
             var dataPieChart = google.visualization.arrayToDataTable([
@@ -126,19 +105,15 @@
               ['Грищенко В.А',              55000],
               ['Антипенко Б.В',              48000],
               ['Шудзь И.К',              25000],
-              ['Ежик Д.Д',              150000]
+              ['Езикова Д.Д',              150000]
             ]);
-
             var optionsPieChart = {
               title: 'Офіціальна заробітна плата перших заступнників прокурора області по регіонам'
             };
-
            var pieChart = new google.visualization.PieChart(document.getElementById('piechart'));
             pieChart.draw(dataPieChart, optionsPieChart);
           }
-
           google.charts.setOnLoadCallback(drawTable);
-
           function drawTable() {
             var dat = new google.visualization.DataTable();
             dat.addColumn('string', 'Name');
@@ -150,20 +125,15 @@
               ['Alice', {v: 12500, f: '$12,500'}, true],
               ['Bob',   {v: 7000,  f: '$7,000'},  true]
             ]);
-
             var table2 = new google.visualization.Table(document.getElementById('list_gpu'));
-
             table2.draw(dat, {showRowNumber: true, width: '100%', height: '100%'});
           }
-
-
-
         </script>
     </head>
         <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-                  
+
                     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                     </div>
                     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
