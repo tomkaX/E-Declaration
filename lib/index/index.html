@@ -8,6 +8,7 @@
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
+
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawSeriesChart);
 
@@ -129,7 +130,6 @@
           }
         </script>
     </head>
-    <body>
         <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
@@ -157,7 +157,7 @@
                             <div class="mdl-card mdl-cell mdl-cell--12-col">
                                 <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                                     <h4 class="mdl-cell mdl-cell--12-col">Graphs</h4>
-
+                                    <button id="button">Click Me</button>
                                     <div style="text-align:center;">
                                         The graphs below will show possibilities of E-Declaration system as an analytical service.
                                         It shows main charts that describe a situation of salaries among officials.
@@ -359,5 +359,10 @@
             </div>
         </body>
         <!-- {%= o.htmlWebpackPlugin.options.pkg.name + ' v' + o.htmlWebpackPlugin.options.pkg.version + ' built on ' + new Date() %} -->
-
+      <script type="text/javascript">
+        var button = document.querySelector('button');
+        button.addEventListener('click', function(){
+          console.warn('Hello Andy!');
+        });
+      </script>
 </html>
