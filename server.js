@@ -1,3 +1,6 @@
+//module.exports = function (){
+
+
 var mailer = require("nodemailer");
 var fs      = require("fs");
 
@@ -33,6 +36,10 @@ var mail = {
     //html: mail.html;
 }
 
+document.guerySelector('#send_email').addEventListener('click', function(){
+  console.log('ready!')
+});
+
 smtpTransport.sendMail(mail, function(error, response){
     if(error){
         console.log(error);
@@ -42,3 +49,4 @@ smtpTransport.sendMail(mail, function(error, response){
 
     smtpTransport.close();
 });
+//}
