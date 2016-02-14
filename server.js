@@ -1,7 +1,7 @@
 //module.exports = function (){
 
 
-var mailer = require("nodemailer");
+var mailer =  require("nodemailer");
 var fs      = require("fs");
 
 
