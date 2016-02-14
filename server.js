@@ -1,12 +1,8 @@
 //module.exports = function (){
 
-<<<<<<< Updated upstream
-
-var mailer =  require("nodemailer");
-=======
-import './node_modules/nodemailer';
+//import './node_modules/nodemailer';
 var mailer = require("nodemailer");
->>>>>>> Stashed changes
+
 var fs      = require("fs");
 
 
