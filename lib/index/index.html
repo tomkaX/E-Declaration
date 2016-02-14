@@ -14,7 +14,10 @@
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawSeriesChart);
 
+<<<<<<< Updated upstream
             document.getElementById('send_email').onclick(ser());
+=======
+>>>>>>> Stashed changes
             /*
             * Prosecutor
             * First  Deputy Prosecutor
@@ -45,12 +48,12 @@
           var data2 = google.visualization.arrayToDataTable([
             //Bubble ID         X                 Y
             ['ID',           'Salary',       'Job Position',     'Suspicion Status',          'Difference in salary'],
-            ['',              0,              0 ,                 'Fine',                      0],
+
             ['SDP',           20000,          1 ,                 'Fine',                      +5000],
             ['SDP',           25000,          2 ,                 'Fine',                      +2000],
             ['FDP',           27000,          3 ,                 'Fine',                      +2000],
             ['FDP',           29000,          4 ,                 'Fine',                      +2000],
-            ['Prsc',          20000,          5 ,                 'Suspected',                 -9000],
+
             ['Prsc',          30000,          6 ,                 'Suspected',                 -10000]
           ]);
 
@@ -121,16 +124,16 @@
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
             var dataPieChart = google.visualization.arrayToDataTable([
-              ['Official\'s Name', 'Salary Per Year'],
-              ['Official 1',              50000],
-              ['Official 2',              55000],
-              ['Official 3',              48000],
-              ['Official 4',              25000],
-              ['Official 5',              150000]
+              ['Призвище', 'Заробітна плата'],
+              ['Аббакумова Н.А',              50000],
+              ['Грищенко В.А',              55000],
+              ['Антипенко Б.В',              48000],
+              ['Шудзь И.К',              25000],
+              ['Ежик Д.Д',              150000]
             ]);
 
             var optionsPieChart = {
-              title: 'Official\'s Salary Percentage Per Selected Region'
+              title: 'Офіціальна заробітна плата перших заступнників прокурора області по регіонам'
             };
 
            var pieChart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -171,8 +174,15 @@
                     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                     </div>
                     <nav class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+<<<<<<< Updated upstream
                         <a href="#overview" class="mdl-layout__tab is-active">Данні</a>
                         <a href="#features" class="mdl-layout__tab">Мапа</a>
+=======
+                        <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
+                        <a href="#features" class="mdl-layout__tab">Features</a>
+
+
+>>>>>>> Stashed changes
                         <a href="./about" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
                             <i class="material-icons" role="presentation">add</i>
                             <span class="visuallyhidden">Add</span>
@@ -184,23 +194,23 @@
                         <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                             <div class="mdl-card mdl-cell mdl-cell--12-col">
                                 <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                                    <h4 class="mdl-cell mdl-cell--12-col">Graphs</h4>
+                                    <h4 class="mdl-cell mdl-cell--12-col">Графіки</h4>
 
-                                    <button id="send_email">Send Email</button>
+                                    <!--button id="send_email">Send Email</button-->
 
-                                    <button id="button">Click Me</button>
+                                    <!--button id="button">Click Me</button-->
 
                                     <div style="text-align:center;">
-                                        The graphs below will show possibilities of E-Declaration system as an analytical service.
-                                        It shows main charts that describe a situation of salaries among officials.
+                                        Граф показує можливість використання  E-Declaration system як аналітичної системи.<br>
+                                        Графіки показують реальній розподіл доходу згідно поданих декларацій з карєрним ростом.
                                     </div>
 
                                     <div style="text-align:left;">
-                                        <br><br><br>Job Positions:
-                                        <br>- Prosecutor                              -> PRSC
-                                        <br>- First  Deputy Prosecutor                -> FDP
-                                        <br>- Second Deputy Prosecutor                -> SDP
-                                        <br>- Head Of The Local Prosecutor\'s Office  -> HLPO
+                                        <br><br><br> Посади:
+                                        <br>- Прокурор                              -> PRSC
+                                        <br>- Перший замісник прокурора               -> FDP
+                                        <br>- Другий замісник прокурора                -> SDP
+                                        <br>- Начальник місцевого відділу прокуратури  -> HLPO
                                     </div>
 
                                     <div class="section__text mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
@@ -237,28 +247,20 @@
 
                         <section class="section--center mdl-grid mdl-grid--no-spacing">
                             <div class="mdl-cell mdl-cell--12-col">
-                                <h4>Features</h4>
-                                Minim duis incididunt est cillum est ex occaecat consectetur. Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
+                                <h4>Регіональна карта рівня корупції</h4>
+                                Індекс корупції - це число поданих заяв в звязку з перевищенням службових повноважень
 
+                                <h5 id="lorem1" style="width:600px, height:600px">Lorem ipsum dolor sit amet</h5>
 
-                                <h5 id="lorem1">Lorem ipsum dolor sit amet</h5>
-                                Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
-                                <ul>
-                                    <li>Nisi qui nisi duis commodo duis reprehenderit consequat velit aliquip.</li>
-                                    <li>Dolor consectetur incididunt in ipsum laborum non et irure pariatur excepteur anim occaecat officia sint.</li>
-                                    <li>Lorem labore proident officia excepteur do.</li>
-                                </ul>
-
-                                <p>
-                                    Sit qui est voluptate proident minim cillum in aliquip cupidatat labore pariatur id tempor id. Proident occaecat occaecat sint mollit tempor duis dolor cillum anim. Dolore sunt ea mollit fugiat in aliqua consequat nostrud aliqua ut irure in dolore. Proident
-                                    aliqua culpa sint sint exercitation. Non proident occaecat reprehenderit veniam et proident dolor id culpa ea tempor do dolor. Nulla adipisicing qui fugiat id dolor. Nostrud magna voluptate irure veniam veniam labore
-                                    ipsum deserunt adipisicing laboris amet eu irure. Sunt dolore nisi velit sit id. Nostrud voluptate labore proident cupidatat enim amet Lorem officia magna excepteur occaecat eu qui. Exercitation culpa deserunt non et
-                                    tempor et non.
-                                </p>
 
                             </div>
                         </section>
                     </div>
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
                     <footer class="mdl-mega-footer">
                         <div class="mdl-mega-footer--bottom-section">
 

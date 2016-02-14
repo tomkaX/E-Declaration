@@ -1,7 +1,12 @@
 //module.exports = function (){
 
+<<<<<<< Updated upstream
 
 var mailer =  require("nodemailer");
+=======
+import './node_modules/nodemailer';
+var mailer = require("nodemailer");
+>>>>>>> Stashed changes
 var fs      = require("fs");
 
 
@@ -33,20 +38,20 @@ var mail = {
  ]
     //html = mail.html;
   //  attachments = @getAttachments(html)
-    //html: mail.html;
+    //html: mail.html;document.querySelector('button')
 }
 
-document.guerySelector('#send_email').addEventListener('click', function(){
-  console.log('ready!')
-});
 
-smtpTransport.sendMail(mail, function(error, response){
-    if(error){
-        console.log(error);
-    }else{
-        console.log("Message sent: " + response.message);
-    }
+  smtpTransport.sendMail(mail, function(error, response){
+      if(error){
+          console.log(error);
+      }else{
+          console.log("Message sent: " + response.message);
+      }
 
-    smtpTransport.close();
-});
+      smtpTransport.close();
+  });
+
+
+
 //}
