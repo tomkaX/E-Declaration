@@ -1,7 +1,28 @@
-http://www.cityscale.com.ua/opendata.htm
-http://www.chesno.org/data/
-http://www.gp.gov.ua/ua/structure_pu.html
-https://docs.google.com/document/d/11_xYGljQ15wE7-IsT71IMxyJJHAX5zutdQ88wUEHBM0/edit
-http://garnahata.in.ua/
-http://bihus.info/najdi-korrupcionera-analiz-dannyh-chinovnikov-iz-proektov-kancelyarskoj-sotni-s-primerami-na-r/
-http://declarations.com.ua/api/
+//////////////////////// I стадия анализа
+// Канцелярская сотня. Декларации: Открытый API
+------------->  http://declarations.com.ua/api/
+
+// І. Оцифровані декларації про майно, доходи та фінансові зобов’язання народних депутатів 7 скликання (станом на 31 липня 2014 року).*
+------------->  http://www.chesno.org/data/
+
+// база даних власників найдорожчої нерухомості України. Це офіційні дані на основі державного реєстру речових прав
+------------->  http://garnahata.in.ua/
+
+//////////////////////// II стадия анализа
+
+// статья про открытую информацию о чиновниках и методах обнаружения коррупции
+------------->  http://bihus.info/najdi-korrupcionera-analiz-dannyh-chinovnikov-iz-proektov-kancelyarskoj-sotni-s-primerami-na-r/
+
+// информационный портал, который предоставляет жителям и специалистам удобный доступ к данным о различных условиях жизни,
+// таких как: стоимость жилья, коммунальные тарифы, преступность, экология, инфраструктура и другие,
+// в виде интерактивных карт, файлов и ресурсов данных, начиная с отдельного дома и заканчивая всей страной.
+------------->  http://www.cityscale.com.ua/opendata.htm
+
+// сайт генеральной прокуратуры украины
+------------->  http://www.gp.gov.ua/ua/structure_pu.html
+
+
+//////////////////////// Общее
+
+// Відкриті реєстри, бази даних для українців
+------------->  https://docs.google.com/document/d/11_xYGljQ15wE7-IsT71IMxyJJHAX5zutdQ88wUEHBM0/edit
