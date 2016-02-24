@@ -1,4 +1,4 @@
-package main.java.logic.controller.exceptions;
+package logic.controller.exceptions;
 
 /**
  * Created by Spayker on 2/24/2016.

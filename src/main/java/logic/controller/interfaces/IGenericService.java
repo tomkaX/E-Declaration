@@ -4,7 +4,7 @@ package logic.controller.interfaces;
  * Created by Spayker on 2/24/2016.
  */
 
-import main.java.logic.model.dao.CommonEntity;
+import logic.model.dao.CommonEntity;
 
 import java.util.Collection;
 import java.util.List;
@@ -26,10 +26,10 @@ public interface IGenericService<T extends CommonEntity> {
      * found.
      *
      * @param id Unique id of the entity to delete
-     * @throws main.java.logic.controller.exceptions.EDeclarationException
+     * @throws logic.controller.exceptions.EDeclarationException
      *                                  If service fails to delete entity
      * @throws IllegalArgumentException If id is <code>null</code>
-     * @throws main.java.logic.controller.exceptions.EDeclarationException
+     * @throws logic.controller.exceptions.EDeclarationException
      *
      */
     @SuppressWarnings("JavaDoc")
@@ -40,10 +40,10 @@ public interface IGenericService<T extends CommonEntity> {
      * Deleting persistent entity from database.
      *
      * @param entity Persistent entity to delete
-     * @throws main.java.logic.controller.exceptions.EDeclarationException
+     * @throws logic.controller.exceptions.EDeclarationException
      *                                  If service fails to delete entity
      * @throws IllegalArgumentException If entity is <code>null</code>
-     * @throws main.java.logic.controller.exceptions.EDeclarationException
+     * @throws logic.controller.exceptions.EDeclarationException
      *
      */
     @SuppressWarnings("JavaDoc")
@@ -54,10 +54,10 @@ public interface IGenericService<T extends CommonEntity> {
      * Deleting all entities by their ids
      *
      * @param ids Collection of ids. If it is null or empty, then doing nothing
-     * @throws main.java.logic.controller.exceptions.EDeclarationException
+     * @throws logic.controller.exceptions.EDeclarationException
      *                                  If error occurs
      * @throws IllegalArgumentException If ids is <code>null</code>
-     * @throws main.java.logic.controller.exceptions.EDeclarationException
+     * @throws logic.controller.exceptions.EDeclarationException
      *
      */
     @SuppressWarnings({"JavaDoc", "UnusedDeclaration"})
@@ -88,9 +88,9 @@ public interface IGenericService<T extends CommonEntity> {
      *         //	 * @throws ServiceException
      *         //	 *             If domain or DB error occurs
      * @throws IllegalArgumentException If entity is <code>null</code>
-     * @throws main.java.logic.controller.exceptions.EDeclarationException
+     * @throws logic.controller.exceptions.EDeclarationException
      *
-     * @throws main.java.logic.controller.exceptions.EDeclarationException
+     * @throws logic.controller.exceptions.EDeclarationException
      *
      */
     @SuppressWarnings("JavaDoc")
