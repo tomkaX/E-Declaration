@@ -1,4 +1,4 @@
-package main.java.model.dao;
+package logic.model.dao;
 
 /**
  * Created by Spayker on 2/21/2016.

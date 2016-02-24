@@ -1,4 +1,4 @@
-package main.java.model.dao;
+package logic.model.dao;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlTransient;
@@ -10,7 +10,7 @@ import java.util.Locale;
  */
 
 @MappedSuperclass
-public abstract class Entity implements Serializable {
+public abstract class CommonEntity implements Serializable {
 
     /**
      * Default serial version id
@@ -78,7 +78,7 @@ public abstract class Entity implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        Entity other = (Entity) obj;
+        CommonEntity other = (CommonEntity) obj;
         if (id == null) {
             if (other.id != null) {
                 return false;
@@ -94,11 +94,11 @@ public abstract class Entity implements Serializable {
 
     }
 
-    public void updateEntity(Entity entity){
+    public void updateEntity(CommonEntity entity){
 
     }
 
-    public Entity getEntityById(int id){
+    public CommonEntity getEntityById(int id){
         return null;
     }
 
