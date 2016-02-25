@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
 
-    <persistence-unit name="auction">
+    <persistence-unit name="EmployeeService">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>logic.model.dao.CommonEntity</class>
         <class>logic.model.dao.User</class>
         <class>logic.model.dao.Declaration</class>
         <class>logic.model.dao.DeclarationInfo</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost/test"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="qwerty"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
     </persistence-unit>
 
 </persistence>

@@ -5,6 +5,7 @@ package logic.controller.interfaces;
  */
 
 import logic.model.dao.CommonEntity;
+import org.springframework.data.repository.CrudRepository;
 
 import java.util.Collection;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.List;
  */
 
 @SuppressWarnings("UnusedDeclaration")
-public interface IGenericService<T extends CommonEntity> {
+public interface ICommonEntityService<T extends CommonEntity> {
 
     /**
      * Deleting entity from database. Doing nothing if entity with passed id not
@@ -94,7 +95,7 @@ public interface IGenericService<T extends CommonEntity> {
      *
      */
     @SuppressWarnings("JavaDoc")
-    public T save(T entity) throws
+    public Object save(T entity) throws
             Exception;
 
     /**
@@ -103,33 +104,18 @@ public interface IGenericService<T extends CommonEntity> {
      * @return number of all entities or 0 if error
      */
     @SuppressWarnings("UnusedDeclaration")
-    public long getAllEntitiesCount();
-
-    /**
-     * Retrieves from database all entities ordered by field specified by
-     * <code>propertySortBy</code> parameter.
-     *
-     * @param propertySortBy Name of property of entity class to order by.
-     * @param asc            Order direction: ascending if <code>true</code> and descending
-     *                       otherwise.
-     * @return List of entities or empty list if there are no entities or error
-     * @throws IllegalArgumentException If propertySortBy is <code>null</code>, or empty
-     */
-    @SuppressWarnings("UnusedDeclaration")
-    public List<T> getAllSorted(String propertySortBy, boolean asc)
-            throws IllegalArgumentException;
+    public int getAllEntitiesCount();
 
     /**
      * Retrieves from database entities for IDs specified by <code>ids</code>
      * parameter.
      *
-     * @param ids List of IDs of entities to retrieve from database.
      * @return List of entities or empty list. If list of IDs is null or empty
      *         method will return empty list of entities.
      * @throws IllegalArgumentException If ids is <code>null</code>
      */
     @SuppressWarnings("UnusedDeclaration")
-    public List<T> getEntitiesByIds(List<Long> ids)
+    public List<T> getAllEntities()
             throws IllegalArgumentException;
 }
 
