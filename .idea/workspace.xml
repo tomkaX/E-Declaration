@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78497cdf-021a-4e8f-9e6b-8b2230fb4e47" name="Default" comment="Changelog: - Rewritten spring jpa methods; - Added basic logic in model (CRUD);">
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\artifacts\1_0_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\artifacts\1_0_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\artifacts\E_Declaration_Web_exploded.xml" afterPath="" />
+    <list default="true" id="78497cdf-021a-4e8f-9e6b-8b2230fb4e47" name="Default" comment="Changelog:&#10;- Removed .idea;">
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\artifacts\E_Declaration_war.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\artifacts\E_Declaration_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\artifacts\jpa_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\encodings.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\libraries\JPA_2_0_JPA_2_0.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\libraries\Maven__antlr_antlr_2_7_7.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\libraries\Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
@@ -51,15 +44,8 @@
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\libraries\Spring_Data_JPA_1_3_3.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\libraries\Spring_MVC_4_2_4_RELEASE.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\libraries\postgresql_9_4_1208_jre6.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\modules.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\idea_projects\E-Declaration\META-INF\db.connect.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/E-Declaration.iml" afterPath="$PROJECT_DIR$/E-Declaration.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
     </list>
     <ignored path="E-Declaration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -248,7 +234,6 @@
       <pane id="PackagesPane">
         <subPane />
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,6 +286,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -689,7 +675,7 @@
       <workItem from="1457179660545" duration="147000" />
       <workItem from="1457179897789" duration="76000" />
       <workItem from="1457180065666" duration="3974000" />
-      <workItem from="1457184228451" duration="601000" />
+      <workItem from="1457184228451" duration="663000" />
     </task>
     <task id="LOCAL-00001" summary="Changelog: - Rewritten spring jpa methods; - Added basic logic in model (CRUD);">
       <created>1457179798796</created>
@@ -715,11 +701,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457184573111</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changelog:&#10;- Removed .idea;">
+      <created>1457184853395</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1457184853395</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87807000" />
+    <option name="totallyTimeSpent" value="87869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -777,7 +769,8 @@
     <MESSAGE value="Changelog:&#10;- Init commit" />
     <MESSAGE value="Changelog: - Rewritten spring jpa methods; - Added basic logic in model (CRUD);" />
     <MESSAGE value="Changelog:&#10;- Updated pom.xml;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changelog:&#10;- Updated pom.xml;" />
+    <MESSAGE value="Changelog:&#10;- Removed .idea;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changelog:&#10;- Removed .idea;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1082,6 +1075,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15567766" vertical-offset="0" max-vertical-offset="546">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
