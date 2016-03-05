@@ -1,16 +1,18 @@
 package logic.model.dao;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 /**
  * Created by Spayker on 2/21/2016.
  */
 
 @Entity
-@Table(name = "user")
-public class User extends CommonEntity{
+@Table(name = "User")
+@NamedQuery(name = "User.findByLastname", query = "select u from User u where u.emailAddress = ?1")
+public class User extends CommonEntity {
 
     @Column(name = "login")
     private String login;

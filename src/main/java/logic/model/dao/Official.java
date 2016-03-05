@@ -25,6 +25,10 @@ public class Official extends User{
         super(newLogin, newPassword, newFirstName, newLastName, newRole);
     }
 
+    public static Official createOfficial(String vasya, String pupkin, String vasek, String qwerty, Roles official) {
+        return new Official();
+    }
+
     public List<Declaration> getDeclarations() {
         return declarations;
     }
@@ -51,5 +55,7 @@ public class Official extends User{
         result = 31 * result + (getDeclarations() != null ? getDeclarations().hashCode() : 0);
         return result;
     }
+
+
 
 }

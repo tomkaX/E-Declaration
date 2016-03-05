@@ -1,10 +1,8 @@
 package logic.controller.interfaces.implementation;
 
 import logic.controller.interfaces.IDeclarationInfoService;
-import logic.model.dao.CommonEntity;
 import logic.model.dao.DeclarationInfo;
 
-import java.util.List;
 
 /**
  * Created by Spayker on 2/25/2016.

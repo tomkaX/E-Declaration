@@ -1,5 +1,8 @@
 package logic.model.dao;
 
+import org.apache.commons.lang.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
@@ -89,17 +92,9 @@ public abstract class CommonEntity implements Serializable {
         return true;
     }
 
-
-    public void createEntity(){
-
+    @Override
+    public String toString() {
+        return new ReflectionToStringBuilder(this,
+                ToStringStyle.SHORT_PREFIX_STYLE).toString();
     }
-
-    public void updateEntity(CommonEntity entity){
-
-    }
-
-    public CommonEntity getEntityById(int id){
-        return null;
-    }
-
 }

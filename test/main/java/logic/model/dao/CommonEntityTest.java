@@ -7,12 +7,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 
-import java.util.Collection;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 /**
  * Created by Spayker on 2/24/2016.
  */
-abstract class CommonEntityTest <T extends logic.model.dao.CommonEntity> {
+public abstract class CommonEntityTest <T extends logic.model.dao.CommonEntity> {
 
     /**
      * Spring application context to use in tests

@@ -1,12 +1,11 @@
 package logic.controller.interfaces;
 
 import logic.model.dao.User;
-import org.springframework.data.repository.CrudRepository;
 
 /**
  * Created by Spayker on 2/24/2016.
  */
-public interface IUserService<T extends User> extends ICommonEntityService<User> {
+public interface IUserService extends ICommonEntityService<User> {
 
     /**
      * @param login
@@ -22,5 +21,6 @@ public interface IUserService<T extends User> extends ICommonEntityService<User>
      * @throws IllegalArgumentException
      */
     public boolean checkExist(User user);
+
 
 }

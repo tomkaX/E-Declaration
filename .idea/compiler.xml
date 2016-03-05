@@ -23,7 +23,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="E-Declaration" />
+        <module name="1.0" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

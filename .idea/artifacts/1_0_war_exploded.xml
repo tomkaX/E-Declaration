@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="E-Declaration:war exploded">
+  <artifact type="exploded-war" name="1.0:war exploded">
     <output-path>$PROJECT_DIR$/target/1.0</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="E-Declaration" />
+          <element id="module-output" name="1.0" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:1.9.4.RELEASE" />
@@ -42,9 +42,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/1.0/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="D:\idea_projects\E-Declaration\target/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="E-Declaration/web/Web" />
+      <element id="javaee-facet-resources" facet="1.0/web/Web" />
     </root>
   </artifact>
 </component>

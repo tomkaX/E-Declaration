@@ -1,7 +1,6 @@
 package logic.controller.interfaces.implementation;
 
 import logic.controller.interfaces.IOfficialService;
-import logic.model.dao.CommonEntity;
 import logic.model.dao.Official;
 
 /**

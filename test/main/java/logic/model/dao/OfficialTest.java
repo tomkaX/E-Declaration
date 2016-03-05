@@ -1,6 +1,8 @@
 package main.java.logic.model.dao;
 
-import junit.framework.TestCase;
+import logic.model.dao.Declaration;
+import logic.model.dao.Official;
+import logic.model.dao.Roles;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,13 +10,13 @@ import java.util.List;
 /**
  * Created by Spayker on 2/24/2016.
  */
-public class OfficialTest extends CommonEntityTest<User> {
+public class OfficialTest extends CommonEntityTest<Official> {
 
     @Override
-    protected User getFirstEntity() {
+    protected Official getFirstEntity() {
         List<Declaration> declarations = new ArrayList<Declaration>();
 
-        return Official.createUser(
+        return Official.createOfficial(
                 "Vasya",
                 "Pupkin",
                 "Vasek",
@@ -25,9 +27,9 @@ public class OfficialTest extends CommonEntityTest<User> {
     }
 
     @Override
-    protected User getSecondEntity() {
+    protected Official getSecondEntity() {
         List<Declaration> declarations = new ArrayList<Declaration>();
-        return Official.createUser(
+        return Official.createOfficial(
                 "Viktor",
                 "Santope",
                 "Dark_vik",
