@@ -1,32 +1,31 @@
 package logic.controller.interfaces.implementation;
 
-import logic.controller.interfaces.IOfficialService;
+import logic.controller.interfaces.repositories.IOfficialRepository;
 import logic.model.dao.Official;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by Spayker on 2/25/2016.
  */
-public class OfficialServiceImplementation extends CommonEntityServiceImplementation<Official> implements
-        IOfficialService {
+@Service
+@Transactional(readOnly = true)
+public class OfficialServiceImplementation {
 
+    @Autowired
+    private IOfficialRepository repository;
 
-    /**
-     * Constructor with fields
-     *
-     * @param persistentClass Class that this dao will work with
-     */
-    public OfficialServiceImplementation(Class<Official> persistentClass) {
-        super(persistentClass);
+    public Official find(Long id) {
+        return repository.findOne(id);
     }
 
-    @Override
-    protected void beforeEntityAddUpdate(Official entity) throws Exception {
-
+    @Transactional
+    public void update(Official official) {
+        repository.saveAndFlush(official);
     }
 
-    @Override
-    protected void beforeEntityDelete(Official entity) throws Exception {
-
+    public Official findByFirstName(String firstName) {
+        return repository.findByFirstName(firstName);
     }
-
 }

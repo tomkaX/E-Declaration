@@ -1,41 +1,31 @@
 package logic.controller.interfaces.implementation;
 
-import logic.controller.interfaces.IUserService;
-import logic.model.dao.CommonEntity;
+import logic.controller.interfaces.repositories.IUserRepository;
 import logic.model.dao.User;
-
-import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by Spayker on 2/25/2016.
  */
-public class UserServiceImplementation extends CommonEntityServiceImplementation<User> implements
-        IUserService {
+@Service
+@Transactional(readOnly = true)
+public class UserServiceImplementation {
 
-    /**
-     * Constructor with fields
-     *
-     * @param persistentClass Class that this dao will work with
-     */
-    public UserServiceImplementation(Class<User> persistentClass) {
-        super(persistentClass);
+    @Autowired
+    private IUserRepository repository;
+
+    public User find(Long id) {
+        return repository.findOne(id);
     }
 
-    public User getByLogin(String login) throws IllegalArgumentException {
-        return null;
+    @Transactional
+    public void update(User user) {
+        repository.saveAndFlush(user);
     }
 
-    public boolean checkExist(User user) {
-        return false;
-    }
-
-    @Override
-    protected void beforeEntityAddUpdate(User entity) throws Exception {
-
-    }
-
-    @Override
-    protected void beforeEntityDelete(User entity) throws Exception {
-
+    public User findByFirstName(String firstName) {
+        return repository.findByFirstName(firstName);
     }
 }

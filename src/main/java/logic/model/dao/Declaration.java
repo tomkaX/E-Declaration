@@ -9,7 +9,11 @@ import java.util.Calendar;
 
 @Entity
 @Table(name = "declaration")
-public class Declaration extends CommonEntity{
+public class Declaration {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private long Id;
 
     @Column(name = "version")
     private String version;

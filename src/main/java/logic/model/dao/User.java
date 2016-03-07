@@ -1,42 +1,39 @@
 package logic.model.dao;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by Spayker on 2/21/2016.
  */
 
 @Entity
-@Table(name = "User")
-@NamedQuery(name = "User.findByLastname", query = "select u from User u where u.emailAddress = ?1")
-public class User extends CommonEntity {
+public class User {
 
-    @Column(name = "login")
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private long Id;
+
     private String login;
 
-    @Column(name = "password")
     private String password;
 
-    @Column(name = "firstName")
     private String firstName;
 
-    @Column(name = "lastName")
     private String lastName;
 
-    @Column(name = "role")
     private Roles role;
 
     protected User() {}
 
     protected User(String newLogin, String newPassword, String newFirstName, String newLastName, Roles newRole) {
-        login = newLogin;
-        password = newPassword;
-        firstName = newFirstName;
-        lastName = newLastName;
-        role = newRole;
+        login       = newLogin;
+        password    = newPassword;
+        firstName   = newFirstName;
+        lastName    = newLastName;
+        role        = newRole;
     }
 
 
@@ -61,7 +58,6 @@ public class User extends CommonEntity {
         if (!getFirstName().equals(user.getFirstName())) return false;
         if (!getLastName().equals(user.getLastName())) return false;
         return getRole() == user.getRole();
-
     }
 
     @Override

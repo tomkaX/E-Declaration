@@ -11,9 +11,8 @@ import java.util.List;
  * Created by Spayker on 2/24/2016.
  */
 
-public class UserTest extends CommonEntityTest<User> {
+public class UserTest {
 
-    @Override
     protected User getFirstEntity() {
         List<Declaration> declarations = new ArrayList<Declaration>();
 
@@ -27,7 +26,6 @@ public class UserTest extends CommonEntityTest<User> {
 
     }
 
-    @Override
     protected User getSecondEntity() {
         List<Declaration> declarations = new ArrayList<Declaration>();
         return User.createUser(

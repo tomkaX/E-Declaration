@@ -1,32 +1,32 @@
 package logic.controller.interfaces.implementation;
 
-import logic.controller.interfaces.IDeclarationInfoService;
+import logic.controller.interfaces.repositories.IDeclarationInfoRepository;
 import logic.model.dao.DeclarationInfo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 
 /**
  * Created by Spayker on 2/25/2016.
  */
-public class DeclarationInfoServiceImplementation extends CommonEntityServiceImplementation<DeclarationInfo> implements
-        IDeclarationInfoService{
+@Service
+@Transactional(readOnly = true)
+public class DeclarationInfoServiceImplementation {
 
+    @Autowired
+    private IDeclarationInfoRepository repository;
 
-    /**
-     * Constructor with fields
-     *
-     * @param persistentClass Class that this dao will work with
-     */
-    public DeclarationInfoServiceImplementation(Class<DeclarationInfo> persistentClass) {
-        super(persistentClass);
+    public DeclarationInfo find(Long id) {
+        return repository.findOne(id);
     }
 
-    @Override
-    protected void beforeEntityAddUpdate(DeclarationInfo entity) throws Exception {
-
+    @Transactional
+    public void update(DeclarationInfo declarationInfo) {
+        repository.saveAndFlush(declarationInfo);
     }
 
-    @Override
-    protected void beforeEntityDelete(DeclarationInfo entity) throws Exception {
-
+    public DeclarationInfo findById(long id) {
+        return repository.findById(id);
     }
 }

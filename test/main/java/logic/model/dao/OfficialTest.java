@@ -10,9 +10,8 @@ import java.util.List;
 /**
  * Created by Spayker on 2/24/2016.
  */
-public class OfficialTest extends CommonEntityTest<Official> {
+public class OfficialTest {
 
-    @Override
     protected Official getFirstEntity() {
         List<Declaration> declarations = new ArrayList<Declaration>();
 
@@ -26,7 +25,6 @@ public class OfficialTest extends CommonEntityTest<Official> {
 
     }
 
-    @Override
     protected Official getSecondEntity() {
         List<Declaration> declarations = new ArrayList<Declaration>();
         return Official.createOfficial(

@@ -1,13 +1,14 @@
 package logic.controller.interfaces.repositories;
 
 import logic.model.dao.User;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 
 /**
  * Created by Spayker on 3/1/2016.
  */
-public interface IUserRepository extends Repository<User, Long> {
-
-    //List<User> findByLastname(String lastname);
+@Transactional(readOnly = true)
+public interface IUserRepository extends JpaRepository<User, Long> {
+    User findByFirstName(String firstName);
 }

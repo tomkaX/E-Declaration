@@ -1,9 +1,9 @@
 package logic.model.dao;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,10 +11,12 @@ import java.util.List;
  * Created by Spayker on 2/24/2016.
  */
 @Entity
-@Table(name = "official")
 public class Official extends User{
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private long Id;
+
     private List<Declaration> declarations = new ArrayList<Declaration>();
 
     private Official() {
@@ -46,7 +48,6 @@ public class Official extends User{
         Official official = (Official) o;
 
         return !(getDeclarations() != null ? !getDeclarations().equals(official.getDeclarations()) : official.getDeclarations() != null);
-
     }
 
     @Override
@@ -55,7 +56,5 @@ public class Official extends User{
         result = 31 * result + (getDeclarations() != null ? getDeclarations().hashCode() : 0);
         return result;
     }
-
-
 
 }

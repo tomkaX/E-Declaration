@@ -1,9 +1,9 @@
 package logic.model.dao;
 
-import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -12,12 +12,13 @@ import java.util.Map;
  * Created by Spayker on 2/22/2016.
  */
 @Entity
-@Table(name = "declarationInfo")
-public class DeclarationInfo extends CommonEntity {
+public class DeclarationInfo {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private long Id;
 
     // an array of data from declaration will be keep here
-    @Column
-    @ElementCollection
     private Map<LinkedList<String>, String> fieldsStorage = new LinkedHashMap();
 
     public Map<LinkedList<String>, String> getFieldsStorage() {
